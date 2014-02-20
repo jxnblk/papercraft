@@ -1,0 +1,113 @@
+// Example theme
+//
+// Edit these styles to adjust the look and feel of your site
+
+
+$blue: #0cf;
+$lighter-gray: #eee;
+$light-gray: #ccc;
+$mid-gray: #bbb;
+$dark-gray: #999;
+
+.white { color: #fff; }
+.blue { color: $blue; }
+.light-gray { color: $light-gray; }
+.mid-gray { color: $mid-gray; }
+.dark-gray { color: $dark-gray; }
+
+.bg-white { background-color: #fff; }
+.bg-blue { background-color: $blue; }
+.bg-light-gray { background-color: $light-gray; }
+.bg-mid-gray { background-color: $mid-gray; }
+.bg-dark-gray { background-color: $dark-gray; }
+
+
+// Base theme styles
+
+body {
+  color: $mid-gray;
+  background-color: #fff;
+}
+
+a {
+  color: $dark-gray;
+  text-decoration: none;
+  &:hover {
+    color: $blue;
+  }
+}
+
+
+// Buttons
+
+.button {
+  border-radius: .25rem;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+  transition-property: color, box-shadow , background-color;
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 1px 4px rgba($blue, .5);
+  }
+}
+
+.button-outline {
+  color: $mid-gray;
+  border-color: $mid-gray;
+  border-width: 2px;
+  border-style: solid;
+  &:focus,
+  &:hover {
+    color: $blue;
+    border-color: $blue;
+  }
+}
+
+.button-blue {
+  color: #fff;
+  background-color: $blue;
+  &:hover {
+    color: #fff;
+    background-color: darken($blue, 20%);
+  }
+}
+
+.button-gray {
+  color: #fff;
+  background-color: $mid-gray;
+  &:hover {
+    color: #fff;
+    background-color: darken($mid-gray, 20%);
+  }
+  &:focus {}
+}
+
+
+
+// Borders
+
+.border {
+  border-style: solid;
+  border-width: 1px;
+}
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.border-light-gray {
+  border-color: $light-gray;
+}
+
+// Utilities
+.rounded { border-radius: .25rem; }
+.transition-all { transition: all .2s ease; }
+
+// Letters
+.papercraft-back {
+  fill: $light-gray;
+}
+.papercraft-front {
+  fill: $lighter-gray;
+}
